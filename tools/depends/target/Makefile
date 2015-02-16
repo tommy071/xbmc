@@ -31,7 +31,7 @@ ifeq ($(OS),ios)
 endif
 
 ifeq ($(OS),osx)
-  DEPENDS += libGLEW libsdl
+  DEPENDS += libGLEW libsdl sparkle
   EXCLUDED_DEPENDS = libusb
 endif
 
