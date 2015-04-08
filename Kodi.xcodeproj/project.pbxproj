@@ -811,6 +811,8 @@
 		DF033D381946612400BFC82E /* AEDeviceEnumerationOSX.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF033D361946612400BFC82E /* AEDeviceEnumerationOSX.cpp */; };
 		DF07252E168734D7008DCAAD /* karaokevideobackground.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF07252C168734D7008DCAAD /* karaokevideobackground.cpp */; };
 		DF072534168734ED008DCAAD /* FFmpegVideoDecoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF072532168734ED008DCAAD /* FFmpegVideoDecoder.cpp */; };
+		DF09E0DA1AD5901F00E9E6EA /* UpdateHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF17C5191AD44E1200109412 /* UpdateHandler.cpp */; };
+		DF09E0DB1AD5902000E9E6EA /* UpdateHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF17C5191AD44E1200109412 /* UpdateHandler.cpp */; };
 		DF0ABB73183A94A30018445D /* Utf8Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF0ABB71183A94A30018445D /* Utf8Utils.cpp */; };
 		DF0ABB74183A94A30018445D /* Utf8Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF0ABB71183A94A30018445D /* Utf8Utils.cpp */; };
 		DF0ABB75183A94A30018445D /* Utf8Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF0ABB71183A94A30018445D /* Utf8Utils.cpp */; };
@@ -11542,6 +11544,7 @@
 				DFF0F2B317528350002DA3A4 /* GUIVideoControl.cpp in Sources */,
 				DFF0F2B417528350002DA3A4 /* GUIVisualisationControl.cpp in Sources */,
 				DFF0F2B517528350002DA3A4 /* GUIWindow.cpp in Sources */,
+				DF09E0DB1AD5902000E9E6EA /* UpdateHandler.cpp in Sources */,
 				DFF0F2B617528350002DA3A4 /* GUIWindowManager.cpp in Sources */,
 				DFF0F2B717528350002DA3A4 /* GUIWrappingListContainer.cpp in Sources */,
 				DFF0F2B817528350002DA3A4 /* imagefactory.cpp in Sources */,
@@ -12180,6 +12183,7 @@
 				E499115F174E5CC300741B6D /* global.cpp in Sources */,
 				E4991160174E5CC300741B6D /* int64.cpp in Sources */,
 				E4991161174E5CC300741B6D /* isnt.cpp in Sources */,
+				DF09E0DA1AD5901F00E9E6EA /* UpdateHandler.cpp in Sources */,
 				E4991162174E5CC300741B6D /* log.cpp in Sources */,
 				E4991163174E5CC300741B6D /* match.cpp in Sources */,
 				E4991164174E5CC300741B6D /* options.cpp in Sources */,
