@@ -70,6 +70,7 @@ SRCS += Temperature.cpp
 SRCS += TextSearch.cpp
 SRCS += TimeSmoother.cpp
 SRCS += TimeUtils.cpp
+SRCS += UpdateHandler.cpp
 SRCS += URIUtils.cpp
 SRCS += UrlOptions.cpp
 SRCS += Variant.cpp
