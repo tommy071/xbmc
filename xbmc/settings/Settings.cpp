@@ -65,12 +65,14 @@
 #include "settings/SettingUtils.h"
 #include "settings/SkinSettings.h"
 #include "settings/lib/SettingsManager.h"
+#include "settings/lib/SettingSection.h"
 #include "threads/SingleLock.h"
 #include "utils/CharsetConverter.h"
 #include "utils/log.h"
 #include "utils/RssManager.h"
 #include "utils/StringUtils.h"
 #include "utils/SystemInfo.h"
+#include "utils/UpdateHandler.h"
 #include "utils/Weather.h"
 #include "utils/XBMCTinyXML.h"
 #include "utils/SeekHandler.h"
@@ -312,6 +314,7 @@ void CSettings::Uninitialize()
 #if defined(TARGET_LINUX) && !defined(TARGET_ANDROID) && !defined(__UCLIBC__)
   m_settingsManager->UnregisterSettingsHandler(&g_timezone);
 #endif
+  m_settingsManager->UnregisterSettingsHandler(&CUpdateHandler::Get());
 
   m_initialized = false;
 }
@@ -521,6 +524,23 @@ void CSettings::InitializeVisibility()
     timezone->SetRequirementsMet(false);
   }
 #endif
+  // hide Updates category in system section if there is no UpdaterImpl
+  if (!CUpdateHandler::Get().UpdateSupported())
+  {
+    const CSettingSection *systemSection = m_settingsManager->GetSection("system");
+    if (systemSection)
+    {
+      SettingCategoryList categories = systemSection->GetCategories();
+      for (auto category : categories)
+      {
+        if (category->GetId() == "updates")
+        {
+          category->SetRequirementsMet(false);
+          break;
+        }
+      }
+    }
+  }
 }
 
 void CSettings::InitializeDefaults()
@@ -649,6 +669,7 @@ void CSettings::InitializeISettingsHandlers()
   m_settingsManager->RegisterSettingsHandler(&g_timezone);
 #endif
   m_settingsManager->RegisterSettingsHandler(&CMediaSettings::Get());
+  m_settingsManager->RegisterSettingsHandler(&CUpdateHandler::Get());
 }
 
 void CSettings::InitializeISubSettings()
@@ -803,6 +824,11 @@ void CSettings::InitializeISettingCallbacks()
   settingSet.clear();
   settingSet.insert("masterlock.lockcode");
   m_settingsManager->RegisterCallback(&g_passwordManager, settingSet);
+
+  settingSet.clear();
+  settingSet.insert("updates.checkforupdates");
+  settingSet.insert("updates.enableautoupdate");
+  m_settingsManager->RegisterCallback(&CUpdateHandler::Get(), settingSet);
 
   settingSet.clear();
   settingSet.insert("pvrmanager.enabled");
