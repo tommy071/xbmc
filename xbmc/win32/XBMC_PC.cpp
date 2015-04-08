@@ -35,6 +35,7 @@
 #include "utils/CPUInfo.h"
 #include <mmdeviceapi.h>
 #include "win32/IMMNotificationClient.h"
+#include "utils/UpdateHandler.h"
 
 #ifndef _DEBUG
 #define XBMC_TRACK_EXCEPTIONS
@@ -236,7 +237,13 @@ INT WINAPI WinMain( HINSTANCE hInst, HINSTANCE, LPSTR commandLine, INT )
     SAFE_RELEASE(pEnumerator);
   }
 
+  // init inapp updater
+  CUpdateHandler::Get().Init();
+
   g_application.Run();
+
+  // deinit the updater
+  CUpdateHandler::Get().Deinit();
 
   // clear previously set timer resolution
   timeEndPeriod(1);		
