@@ -818,6 +818,8 @@
 		DF14CF7E1A77782E00396CC9 /* InputManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF14CF7C1A77782E00396CC9 /* InputManager.cpp */; };
 		DF14CF7F1A77782E00396CC9 /* InputManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF14CF7C1A77782E00396CC9 /* InputManager.cpp */; };
 		DF14CF801A77782E00396CC9 /* InputManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF14CF7C1A77782E00396CC9 /* InputManager.cpp */; };
+		DF17C5171AD4448300109412 /* UpdaterOsx.mm in Sources */ = {isa = PBXBuildFile; fileRef = DF17C5161AD4448300109412 /* UpdaterOsx.mm */; };
+		DF17C51B1AD44E1200109412 /* UpdateHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF17C5191AD44E1200109412 /* UpdateHandler.cpp */; };
 		DF2345E115FA639500A934F6 /* UPnP.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF2345D915FA639500A934F6 /* UPnP.cpp */; settings = {COMPILER_FLAGS = "-I$SRCROOT/lib/libUPnP -I$SRCROOT/lib/libUPnP/Neptune/Source/Core -I$SRCROOT/lib/libUPnP/Platinum/Source/Core -I$SRCROOT/lib/libUPnP/Platinum/Source/Platinum  -I$SRCROOT/lib/libUPnP/Platinum/Source/Extras -I$SRCROOT/lib/libUPnP/Platinum/Source/Devices/MediaServer -I$SRCROOT/lib/libUPnP/Platinum/Source/Devices/MediaConnect -I$SRCROOT/lib/libUPnP/Platinum/Source/Devices/MediaRenderer"; }; };
 		DF2345E215FA639500A934F6 /* UPnPInternal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF2345DB15FA639500A934F6 /* UPnPInternal.cpp */; settings = {COMPILER_FLAGS = "-I$SRCROOT/lib/libUPnP -I$SRCROOT/lib/libUPnP/Neptune/Source/Core -I$SRCROOT/lib/libUPnP/Platinum/Source/Core -I$SRCROOT/lib/libUPnP/Platinum/Source/Platinum  -I$SRCROOT/lib/libUPnP/Platinum/Source/Extras -I$SRCROOT/lib/libUPnP/Platinum/Source/Devices/MediaServer -I$SRCROOT/lib/libUPnP/Platinum/Source/Devices/MediaConnect -I$SRCROOT/lib/libUPnP/Platinum/Source/Devices/MediaRenderer"; }; };
 		DF2345E315FA639500A934F6 /* UPnPRenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF2345DD15FA639500A934F6 /* UPnPRenderer.cpp */; settings = {COMPILER_FLAGS = "-I$SRCROOT/lib/libUPnP -I$SRCROOT/lib/libUPnP/Neptune/Source/Core -I$SRCROOT/lib/libUPnP/Platinum/Source/Core -I$SRCROOT/lib/libUPnP/Platinum/Source/Platinum  -I$SRCROOT/lib/libUPnP/Platinum/Source/Extras -I$SRCROOT/lib/libUPnP/Platinum/Source/Devices/MediaServer -I$SRCROOT/lib/libUPnP/Platinum/Source/Devices/MediaConnect -I$SRCROOT/lib/libUPnP/Platinum/Source/Devices/MediaRenderer"; }; };
@@ -4323,6 +4325,11 @@
 		DF0DF15A13A3ADA7008ED511 /* NFSDirectory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NFSDirectory.h; sourceTree = "<group>"; };
 		DF14CF7C1A77782E00396CC9 /* InputManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = InputManager.cpp; sourceTree = "<group>"; };
 		DF14CF7D1A77782E00396CC9 /* InputManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputManager.h; sourceTree = "<group>"; };
+		DF17C5151AD4448300109412 /* UpdaterOsx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdaterOsx.h; sourceTree = "<group>"; };
+		DF17C5161AD4448300109412 /* UpdaterOsx.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = UpdaterOsx.mm; sourceTree = "<group>"; };
+		DF17C5181AD44E1200109412 /* IUpdater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IUpdater.h; sourceTree = "<group>"; };
+		DF17C5191AD44E1200109412 /* UpdateHandler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UpdateHandler.cpp; sourceTree = "<group>"; };
+		DF17C51A1AD44E1200109412 /* UpdateHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateHandler.h; sourceTree = "<group>"; };
 		DF1ACFD115FCE50700E10810 /* AddonModuleXbmc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AddonModuleXbmc.cpp; sourceTree = "<group>"; };
 		DF1ACFD515FCE50700E10810 /* AddonModuleXbmcaddon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AddonModuleXbmcaddon.cpp; sourceTree = "<group>"; };
 		DF1ACFD915FCE50700E10810 /* AddonModuleXbmcgui.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AddonModuleXbmcgui.cpp; sourceTree = "<group>"; };
@@ -8103,12 +8110,14 @@
 				6E2FACD20E26E92800DF79EA /* Info.plist */,
 				F51CEEEE0F5C5D20004F4602 /* OSXGNUReplacements.c */,
 				F51CEEF00F5C5D28004F4602 /* OSXGNUReplacements.h */,
-				180F6C7F17CE9A5700127892 /* smc.h */,
-				180F6C8017CE9A5700127892 /* smc.c */,
-				E306D12C0DDF7B590052C2AD /* XBMCHelper.cpp */,
-				E306D12D0DDF7B590052C2AD /* XBMCHelper.h */,
 				820023D9171A28A300667D1C /* OSXTextInputResponder.h */,
 				820023DA171A28A300667D1C /* OSXTextInputResponder.mm */,
+				180F6C8017CE9A5700127892 /* smc.c */,
+				180F6C7F17CE9A5700127892 /* smc.h */,
+				DF17C5151AD4448300109412 /* UpdaterOsx.h */,
+				DF17C5161AD4448300109412 /* UpdaterOsx.mm */,
+				E306D12C0DDF7B590052C2AD /* XBMCHelper.cpp */,
+				E306D12D0DDF7B590052C2AD /* XBMCHelper.h */,
 			);
 			path = osx;
 			sourceTree = "<group>";
@@ -9202,6 +9211,7 @@
 				E38E1E4D0D25F9FD00618676 /* InfoLoader.h */,
 				DFAF6A4C16EBAE3800D6AE12 /* IRssObserver.h */,
 				36A9443E15821E5400727135 /* ISortable.h */,
+				DF17C5181AD44E1200109412 /* IUpdater.h */,
 				7CAA205B107AFC280096DE39 /* Job.h */,
 				F57B6F7E1071B8B500079ACB /* JobManager.cpp */,
 				F57B6F7F1071B8B500079ACB /* JobManager.h */,
@@ -9281,6 +9291,8 @@
 				7CEE2E5A13D6B71E000ABF2A /* TimeSmoother.h */,
 				7CCF7FC7106A0DF500992676 /* TimeUtils.cpp */,
 				7CCF7FC8106A0DF500992676 /* TimeUtils.h */,
+				DF17C5191AD44E1200109412 /* UpdateHandler.cpp */,
+				DF17C51A1AD44E1200109412 /* UpdateHandler.h */,
 				18B7C8EC12942613009E7A26 /* URIUtils.cpp */,
 				18B7C8ED12942613009E7A26 /* URIUtils.h */,
 				36A9466815CF1FED00727135 /* UrlOptions.cpp */,
@@ -10409,6 +10421,7 @@
 				E36C29EA0DA72486001F0C9D /* ScraperUrl.cpp in Sources */,
 				E36C29EB0DA72486001F0C9D /* MusicArtistInfo.cpp in Sources */,
 				E36C29EC0DA72486001F0C9D /* Fanart.cpp in Sources */,
+				DF17C51B1AD44E1200109412 /* UpdateHandler.cpp in Sources */,
 				880DBE4E0DC223FF00E26B71 /* MediaSource.cpp in Sources */,
 				880DBE550DC224A100E26B71 /* MusicFileDirectory.cpp in Sources */,
 				8883CEA10DD817D1004E8B72 /* DVDOverlayCodecSSA.cpp in Sources */,
@@ -10847,6 +10860,7 @@
 				DF00492D162DAEA200A971AD /* PVROperations.cpp in Sources */,
 				DFD928F316384B6800709DAE /* Timer.cpp in Sources */,
 				DF9A71EE1639C8F6005ECB2E /* HTTPFile.cpp in Sources */,
+				DF17C5171AD4448300109412 /* UpdaterOsx.mm in Sources */,
 				DFB25D2F163D4743006C4A48 /* Addon.cpp in Sources */,
 				DFB25D30163D4743006C4A48 /* AddonCallback.cpp in Sources */,
 				DFB25D31163D4743006C4A48 /* AddonClass.cpp in Sources */,
