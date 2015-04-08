@@ -9959,7 +9959,10 @@ msgctxt "#20126"
 msgid "Log off"
 msgstr ""
 
-#empty string with id 20127
+#: system/settings/settings.xml
+msgctxt "#20127"
+msgid "Updates"
+msgstr ""
 
 #: xbmc/windows/GUIWindowFileManager.cpp
 msgctxt "#20128"
@@ -10160,7 +10163,10 @@ msgctxt "#20173"
 msgid "FTP server"
 msgstr ""
 
-#empty string with id 20174
+#: system/settings/settings.xml
+msgctxt "#20174"
+msgid "Automatically check for updates"
+msgstr ""
 
 #: xbmc/network/GUIDialogNetworkSetup.cpp
 msgctxt "#20175"
@@ -10287,7 +10293,12 @@ msgctxt "#20221"
 msgid "With this enabled, any information that is downloaded for albums and artists will override anything you have set in your song tags, such as genres, year, song artists etc. Useful if you have MusicBrainz identifiers in your song tags."
 msgstr ""
 
-#empty strings from id 20222 to 20239
+#: system/settings/settings.xml
+msgctxt "#20222"
+msgid "Check now"
+msgstr ""
+
+#empty strings from id 20223 to 20239
 
 #: xbmc/dialogs/GUIDialogMediaSource.cpp
 msgctxt "#20240"
@@ -15845,7 +15856,11 @@ msgctxt "#36419"
 msgid "Define locations used for retrieving weather information."
 msgstr ""
 
-#empty string with id 36420
+#. Description of settings category "System -> Updates" with label #20127
+#: system/settings/settings.xml
+msgctxt "#36420"
+msgid "Settings for auto updating Kodi."
+msgstr ""
 
 #. Description of setting "Videos -> Playback -> Prefer VDPAU Video Mixer" with label #13437
 #: system/settings/settings.xml
@@ -15859,7 +15874,11 @@ msgctxt "#36422"
 msgid "Enable hardware video decode using AMLogic decoder."
 msgstr ""
 
-#empty string with id 36423
+#. Description of settings category "System -> Updates -> Enable autoupdate" with label #20174
+#: system/settings/settings.xml
+msgctxt "#36423"
+msgid "If this is enabled you will be automatically informed about new Kodi versions and can decide if an update should be done."
+msgstr ""
 
 #: system/settings/settings.xml
 msgctxt "#36424"
@@ -15928,7 +15947,13 @@ msgctxt "#36435"
 msgid "Use DVDPlayer for decoding of video files with MMAL acceleration."
 msgstr ""
 
-#empty strings from id 36436 to 36499
+#. Description of settings category "System -> Updates -> Check now" with label #20222
+#: system/settings/settings.xml
+msgctxt "#36436"
+msgid "Normally its sufficient to let Kodi check for updates automatically. If you feel the need to check for an update now you can press this button."
+msgstr ""
+
+#empty strings from id 36437 to 36499
 #end reservation
 
 #. label of a setting for the stereoscopic 3D mode of the GUI that is/should be applied
